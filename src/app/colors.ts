@@ -1,4 +1,4 @@
-export const secondary = '#133E87'
-export const primary = '#789DBC'
-export const alternate = '#608BC1'
-export const tertiary = '#CBDCEB'
+export const secondary = '#333533'
+export const primary = '#242423'
+export const alternate = '#E8EDDF'
+export const tertiary = '#F5CB5C'
