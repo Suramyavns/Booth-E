@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-*::-webkit-scrollbar{
-  display: none;
-}
 html, body {
   height: 100%; /* Ensures the html and body tags can fill the viewport */
   margin: 0; /* Remove default margin */
 }
 body{
   height: 100vh;
+  overflow: hidden;
+}
+*::-webkit-scrollbar{
+  display: none;
 }
 .btn{
   background-color: #e8eddf;
