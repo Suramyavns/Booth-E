@@ -2,24 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*::-webkit-scrollbar{
+  display: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%; /* Ensures the html and body tags can fill the viewport */
+  margin: 0; /* Remove default margin */
 }
-
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #272727;
-  color: aliceblue;
-  padding: 0.5rem;
+  height: 100vh;
+}
+.btn{
+  background-color: #608BC1;
+  transition: ease 0.3s;
+  @apply rounded-xl p-2 flex gap-2 justify-center items-center opacity-80 hover:opacity-100
+}
+input{
+  @apply bg-transparent border-b p-1 focus:outline-none
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* Makes background fully transparent */
+  -webkit-text-fill-color: #F6FCDF; /* Ensures text color is consistent with the input's normal state */
+  background-color: transparent !important; /* Fallback to ensure transparency */
+  transition: background-color 5000s ease-in-out 0s; /* Avoids flashing effect on autofill */
 }

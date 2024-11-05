@@ -1,8 +1,9 @@
+import { primary, tertiary } from './colors'
 import './globals.css'
 
 export const metadata = {
-  "title":'Welcome to Booth-E',
-  'description':'Manage your exhibition footfall'
+  "title":'Booth-E',
+  'description':'Your friendly footfall manager'
 }
 
 export default function RootLayout({
@@ -15,9 +16,12 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </head>
-      <body>
-        <div className='w-full h-full flex justify-center items-center'>
-          {children}
+      <body style={{
+        backgroundColor:primary,
+        color:tertiary
+      }}>
+        <div className="w-screen h-screen flex justify-center items-center">
+          {children}          
         </div>
       </body>
     </html>
